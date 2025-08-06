@@ -8,10 +8,12 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
+      margin: 0;
+      font-family: sans-serif;
     }
     body::before {
       content: '';
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       right: 0;
@@ -19,16 +21,33 @@
       background: rgba(255, 255, 255, 0.5);
       z-index: -1;
     }
-    h1, p, iframe {
-      position: relative;
-      z-index: 1;
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+    h1, p {
+      text-align: left;
+    }
+    iframe {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Hello, GitHub!</h1>
-  <p>This is my first deployed website using GitHub Pages.</p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/qct0JLjaHDc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <p><a href="https://www.spacex.com/">Visit SpaceX</a></p>
+  <div class="container">
+    <h1>Hello, GitHub!</h1>
+    <p>This is my first deployed website using GitHub Pages.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/qct0JLjaHDc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p><a href="https://www.spacex.com/">Visit SpaceX</a></p>
+  </div>
 </body>
 </html>
