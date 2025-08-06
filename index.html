@@ -4,38 +4,40 @@
   <title>My First GitHub Page</title>
   <style>
     body {
-      background-image: url('https://www.agoda.com/wp-content/uploads/2024/06/Duomo-and-Florence-after-sunset.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
+      background-color: #ffffff;
       margin: 0;
       font-family: sans-serif;
     }
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(255, 255, 255, 0.5);
-      z-index: -1;
+    .banner {
+      background-image: url('https://www.agoda.com/wp-content/uploads/2024/06/Duomo-and-Florence-after-sunset.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .banner h1 {
+      color: white;
+      text-shadow: 2px 2px 4px #000000;
     }
     .container {
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
-      text-align: center;
     }
-    h1, p {
+    p {
       text-align: left;
     }
     iframe {
       max-width: 100%;
       display: block;
-      margin: 0 auto;
+      margin: 20px auto;
     }
     @media (max-width: 600px) {
+      .banner {
+        height: 150px;
+      }
       .container {
         padding: 10px;
       }
@@ -43,8 +45,10 @@
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="banner">
     <h1>Hello, GitHub!</h1>
+  </div>
+  <div class="container">
     <p>This is my first deployed website using GitHub Pages.</p>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/qct0JLjaHDc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <p><a href="https://www.spacex.com/">Visit SpaceX</a></p>
